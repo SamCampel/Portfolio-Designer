@@ -13,9 +13,10 @@
         <a href="#" class="logo">Yasmim Campos</a>
 
         <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
+            <a href="#" class="active">Início</a>
+            <a href="#about">Sobre mim</a>
+            <a href="#services">Serviços</a>
+            <a href="#contact">Contatos</a>
         </nav>
     </header>
 
@@ -48,6 +49,70 @@
         </span>
     </section>
 
+    <section id="about" class="aboutme">
+        <h1 class="abtme-title">Sobre mim</h1>
+        <div class="aboutme-content">
+            <h2>Transformando ideias em impacto visual</h2>
+            <h3>Yasmim Campos — Designer Gráfica</h3>
+            <p>
+            Olá! Sou Yasmim Campos, apaixonada por design desde que descobri que uma paleta de cores pode contar uma história. Com mais de 5 anos de experiência em criação visual, ajudo marcas a se expressarem com autenticidade e estilo. 
+            </p>
+            <p>
+            Meu trabalho vai além da estética — busco criar conexões reais entre pessoas e projetos. Já colaborei com startups, ONGs e empreendedores independentes, sempre com foco em soluções criativas e funcionais.
+            </p>
+            <p>
+            Quando não estou desenhando, estou explorando novas fontes, estudando tendências ou tomando café com sketchbook na mão. Vamos criar algo incrível juntos?
+            </p>
+        </div>
+    </section>
+
+
+    <section id="services" class="services">
+        <h1>Meus Serviços</h1>
+            <div class="services-content">
+                <h2>Design que comunica, conecta e encanta</h2>
+                <h3>O que posso criar para você</h3>
+                <p>
+                    Cada projeto é uma oportunidade de transformar ideias em experiências visuais memoráveis. Meu trabalho é pensado para atender às necessidades reais de comunicação, com estética refinada e propósito claro.
+                </p>
+                <p>
+                    • <strong>Identidade Visual:</strong> Criação de logotipos, paletas de cores, tipografia e elementos gráficos que representam a essência da sua marca.<br>
+                    • <strong>Design para Mídias Sociais:</strong> Layouts personalizados para posts, stories, banners e campanhas digitais.<br>
+                    • <strong>Materiais Impressos:</strong> Cartazes, folders, cartões de visita e embalagens com acabamento profissional.<br>
+                    • <strong>Consultoria Criativa:</strong> Orientação estratégica para posicionamento visual e comunicação de marca.
+                </p>
+                <p>
+                    Seja você um empreendedor, artista ou empresa, meu objetivo é criar soluções visuais que elevem sua presença e deixem uma impressão duradoura. Vamos dar vida à sua ideia?
+                </p>
+            </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h1>Entre em Contato</h1>
+        <div class="contact-content">
+            <h2>Vamos conversar?</h2>
+            <h3>Estou pronta para ouvir sua ideia</h3>
+        <p>
+            Se você gostou do meu trabalho e quer transformar sua visão em um projeto visual marcante, estou à disposição! Seja para tirar dúvidas, solicitar um orçamento ou apenas trocar ideias criativas, será um prazer conversar com você.
+        </p>
+        <p>
+            📧 <strong>Email:</strong> yasmim.design@email.com<br>
+            📱 <strong>WhatsApp:</strong> (11) 91234-5678<br>
+            📍 <strong>Localização:</strong> São Paulo, SP — Brasil
+        </p>
+        <p>
+            Você também pode me encontrar nas redes sociais abaixo ou clicar no botão “Me contrate!” lá no topo da página.
+        </p>
+        </div>
+
+        <div class="home-sci-contact">
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-behance"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-pinterest"></i></a>
+        </div>
+    </section>
+
     <script>
         const slides = document.querySelectorAll('.home-imgHover .slide');
         let current = 0;
@@ -57,6 +122,24 @@
             current = (current + 1) % slides.length;
             slides[current].classList.add('active');
         }, 7000);
+
+        const header = document.querySelector(".header");
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+            // Rolando para baixo
+            header.style.top = "-100px"; // Ajuste se sua navbar tiver outra altura
+            } else {
+            // Rolando para cima
+            header.style.top = "0";
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+        
     </script>
 </body>
 </html>
