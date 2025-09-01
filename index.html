@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" href="">
+
+    <title>portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Yasmim Campos</a>
+
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Olá, sou a Yasmim</h1>
+            <h3>Designer Gráfica</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum dolore, ab temporibus nesciunt qui, est nulla officia quasi neque quibusdam harum necessitatibus minus iure. Molestiae totam consectetur consequatur natus iusto.</p>
+            
+            <div class="btn-box">
+                <a href="#">Me contrate!</a>
+                <a href="#">Consultar</a>
+
+            </div>
+        </div>
+
+        <div class="home-sci">
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-behance"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-pinterest"></i></a>
+        </div>
+
+        <span class="home-imgHover">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" class="slide active" style="animation: slideInFromRight 1s ease forwards;">>
+            <img src="https://images.unsplash.com/photo-1606788075761-6c0fefb4b6c3" class="slide" >
+            <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df" class="slide">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" class="slide">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" class="slide"> 
+        </span>
+    </section>
+
+    <script>
+        const slides = document.querySelectorAll('.home-imgHover .slide');
+        let current = 0;
+
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 7000);
+    </script>
+</body>
+</html>
+
