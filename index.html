@@ -96,13 +96,19 @@
             Se você gostou do meu trabalho e quer transformar sua visão em um projeto visual marcante, estou à disposição! Seja para tirar dúvidas, solicitar um orçamento ou apenas trocar ideias criativas, será um prazer conversar com você.
         </p>
         <p>
-            📧 <strong>Email:</strong> yasmim.design@email.com<br>
-            📱 <strong>WhatsApp:</strong> (11) 91234-5678<br>
-            📍 <strong>Localização:</strong> São Paulo, SP — Brasil
+            Preencha o formulário abaixo que retorno o mais rápido possível:
         </p>
+            <form action="https://formspree.io/f/mayplcde" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="message" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <br><hr><br>
         <p>
             Você também pode me encontrar nas redes sociais abaixo ou clicar no botão “Me contrate!” lá no topo da página.
         </p>
+        <br>
         </div>
 
         <div class="home-sci-contact">
@@ -130,10 +136,10 @@
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
             if (scrollTop > lastScrollTop) {
-            // Rolando para baixo
-            header.style.top = "-100px"; // Ajuste se sua navbar tiver outra altura
+            
+            header.style.top = "-100px";
             } else {
-            // Rolando para cima
+            
             header.style.top = "0";
             }
 
